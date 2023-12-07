@@ -16,6 +16,10 @@ def solution(lines: list[str]):
     dist: list[int]
 
     times, dist = parse_lines(lines)
+
+    times = [int("".join([str(t) for t in times]))]
+    dist = [int("".join([str(d) for d in dist]))]
+
     race_opts: list[int] = []
     for race_iter in range(len(times)):
         race_time: int = times[race_iter]
